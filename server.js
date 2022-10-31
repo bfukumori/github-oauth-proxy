@@ -26,7 +26,6 @@ app.get('/getAccessToken', async (req, res) => {
 
 app.get('/getUserData', async (req, res) => {
   const header = req.get('Authorization');
-  console.log(header);
   await fetch('https://api.github.com/user', {
     method: 'GET',
     headers: {
